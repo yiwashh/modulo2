@@ -1,0 +1,143 @@
+/* ============================================================
+   styles.css — TechStore — Módulo 2
+   ============================================================ */
+
+/* ---- Compensar altura de navbar fija ---- */
+body {
+  padding-top: 56px;
+}
+
+/* ============================================================
+   BANNER
+   ============================================================ */
+.banner-img {
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.banner-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+/* ============================================================
+   ICONOS DE CARACTERÍSTICAS
+   ============================================================ */
+.feature-icon {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+/* ============================================================
+   CARDS DE PRODUCTO
+   ============================================================ */
+.producto-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+.producto-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.producto-card .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.producto-card .card-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.producto-card .card-footer {
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+}
+
+.precio {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+/* ============================================================
+   TABLA CON SCROLL
+   ============================================================ */
+.tabla-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.tabla-scroll table {
+  margin-bottom: 0;
+  min-width: 700px;
+}
+
+.tabla-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-principal {
+  background-color: #1a1a2e;
+}
+
+.footer-titulo {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-texto {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  line-height: 1.8;
+}
+
+.footer-address {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  line-height: 1.8;
+  font-style: normal;
+}
+
+.footer-link {
+  color: #74b9ff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-hr {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #6c757d;
+}

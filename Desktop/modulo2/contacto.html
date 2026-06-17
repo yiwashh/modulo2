@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TechStore - Contacto</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Open Iconic -->
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR FIJA ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand font-weight-bold" href="index.html">⚡ TechStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <span class="oi oi-home mr-1"></span>Inicio
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contacto.html">
+            <span class="oi oi-envelope-closed mr-1"></span>Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html"><span class="oi oi-home mr-1"></span>Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Contacto</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- ===== FORMULARIO ===== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="card-title mb-4 text-center">
+                <span class="oi oi-envelope-closed mr-2"></span>Contactanos
+              </h3>
+
+              <form>
+
+                <!-- Nombre -->
+                <div class="form-group">
+                  <label for="nombre">
+                    <span class="oi oi-person mr-1"></span>Nombre completo
+                  </label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">
+                    <span class="oi oi-envelope-closed mr-1"></span>Email
+                  </label>
+                  <input type="email" class="form-control" id="email" placeholder="tu@email.com">
+                </div>
+
+                <!-- Listado seleccionable -->
+                <div class="form-group">
+                  <label for="consulta">
+                    <span class="oi oi-list mr-1"></span>Motivo de contacto
+                  </label>
+                  <select class="form-control" id="consulta">
+                    <option value="">Seleccioná una opción...</option>
+                    <option>Consulta sobre un producto</option>
+                    <option>Estado de mi pedido</option>
+                    <option>Garantía o devolución</option>
+                    <option>Suscripción a newsletter</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label for="mensaje">
+                    <span class="oi oi-comment-square mr-1"></span>Mensaje
+                  </label>
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribí tu consulta aquí..."></textarea>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="suscribir">
+                  <label class="form-check-label" for="suscribir">
+                    Quiero suscribirme al newsletter y recibir ofertas exclusivas
+                  </label>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="btn btn-primary btn-block">
+                  <span class="oi oi-paper-plane mr-1"></span>Enviar mensaje
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TABLA CON SCROLL Y OPEN ICONIC ===== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h4 class="mb-3">
+        <span class="oi oi-spreadsheet mr-2"></span>Comparativa de productos
+      </h4>
+
+      <!-- Tabla con scroll horizontal -->
+      <div class="table-responsive tabla-scroll">
+        <table class="table table-bordered table-hover table-sm text-center align-middle">
+          <thead class="thead-dark">
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Garantía</th>
+              <th>Envío gratis</th>
+              <th>Stock</th>
+              <th>Cuotas</th>
+              <th>Calificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left font-weight-bold">Laptop UltraBook Pro</td>
+              <td>$899</td>
+              <td><span class="oi oi-check text-success"></span> 2 años</td>
+              <td><span class="oi oi-check text-success"></span></td>
+              <td><span class="oi oi-check text-success"></span> Disponible</td>
+              <td><span class="oi oi-check text-success"></span> 12 cuotas</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+            <tr>
+              <td class="text-left font-weight-bold">Smartphone Galaxy Z</td>
+              <td>$549</td>
+              <td><span class="oi oi-check text-success"></span> 1 año</td>
+              <td><span class="oi oi-check text-success"></span></td>
+              <td><span class="oi oi-check text-success"></span> Disponible</td>
+              <td><span class="oi oi-check text-success"></span> 6 cuotas</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+            <tr>
+              <td class="text-left font-weight-bold">Auriculares NoisePro</td>
+              <td>$199</td>
+              <td><span class="oi oi-check text-success"></span> 1 año</td>
+              <td><span class="oi oi-x text-danger"></span></td>
+              <td><span class="oi oi-check text-success"></span> Disponible</td>
+              <td><span class="oi oi-check text-success"></span> 3 cuotas</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+            <tr>
+              <td class="text-left font-weight-bold">Monitor 4K CurvedView</td>
+              <td>$649</td>
+              <td><span class="oi oi-check text-success"></span> 3 años</td>
+              <td><span class="oi oi-check text-success"></span></td>
+              <td><span class="oi oi-warning text-warning"></span> Últimas unidades</td>
+              <td><span class="oi oi-check text-success"></span> 12 cuotas</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+            <tr>
+              <td class="text-left font-weight-bold">Teclado Mecánico RGB</td>
+              <td>$129</td>
+              <td><span class="oi oi-check text-success"></span> 1 año</td>
+              <td><span class="oi oi-x text-danger"></span></td>
+              <td><span class="oi oi-check text-success"></span> Disponible</td>
+              <td><span class="oi oi-x text-danger"></span> No disponible</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+            <tr>
+              <td class="text-left font-weight-bold">Mouse ErgoMax</td>
+              <td>$59</td>
+              <td><span class="oi oi-check text-success"></span> 1 año</td>
+              <td><span class="oi oi-x text-danger"></span></td>
+              <td><span class="oi oi-check text-success"></span> Disponible</td>
+              <td><span class="oi oi-x text-danger"></span> No disponible</td>
+              <td><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span><span class="oi oi-star text-warning"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-principal text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-left mb-4">
+          <h5 class="footer-titulo">TechStore</h5>
+          <address class="footer-address">
+            <strong>Dirección:</strong><br>
+            Av. Tecnología 1234, Piso 3<br>
+            Buenos Aires, Argentina<br>
+            <abbr title="Teléfono">Tel:</abbr> +54 11 4567-8900<br>
+            <a href="mailto:ventas@techstore.com" class="footer-link">ventas@techstore.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-4">
+          <h5 class="footer-titulo">Horarios</h5>
+          <ul class="list-unstyled footer-texto">
+            <li>Lunes a Viernes: 9:00 – 18:00</li>
+            <li>Sábados: 10:00 – 14:00</li>
+            <li>Domingos: Cerrado</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 text-md-right text-center mb-4">
+          <h5 class="footer-titulo">Redes sociales</h5>
+          <ul class="list-unstyled footer-texto">
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Facebook</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Instagram</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Twitter/X</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <p class="text-center footer-copy mb-0">&copy; 2026 TechStore · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

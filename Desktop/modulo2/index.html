@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TechStore - Inicio</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Open Iconic -->
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR FIJA ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand font-weight-bold" href="index.html">⚡ TechStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <span class="oi oi-home mr-1"></span>Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">
+            <span class="oi oi-envelope-closed mr-1"></span>Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== BANNER / CAROUSEL ===== -->
+  <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#bannerCarousel" data-slide-to="1"></li>
+      <li data-target="#bannerCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/seed/tech1/1200/450" class="d-block w-100 banner-img" alt="Oferta laptops">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Laptops de última generación</h2>
+          <p>Hasta 30% OFF en modelos seleccionados</p>
+          <a href="#productos" class="btn btn-primary">Ver ofertas</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/seed/tech2/1200/450" class="d-block w-100 banner-img" alt="Smartphones">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Smartphones top 2026</h2>
+          <p>Los mejores precios del mercado</p>
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/seed/tech3/1200/450" class="d-block w-100 banner-img" alt="Accesorios">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Accesorios para tu setup</h2>
+          <p>Envío gratis en compras mayores a $50</p>
+          <a href="#productos" class="btn btn-primary">Ver accesorios</a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+          <span class="oi oi-home mr-1"></span>Inicio
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- ===== CARACTERÍSTICAS ===== -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-truck feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Envío rápido</h6>
+          <p class="text-muted small">Entrega en 48 hs hábiles a todo el país.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-shield feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Garantía oficial</h6>
+          <p class="text-muted small">Todos los productos con respaldo del fabricante.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-credit-card feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Múltiples pagos</h6>
+          <p class="text-muted small">Tarjetas, transferencia y hasta 12 cuotas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ===== LISTADO DE PRODUCTOS - CARDS ===== -->
+  <section id="productos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+      <div class="row">
+
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/laptop/400/220" class="card-img-top" alt="Laptop UltraBook Pro">
+            <div class="card-body">
+              <h5 class="card-title">Laptop UltraBook Pro</h5>
+              <p class="card-text">Intel Core i7, 16 GB RAM, SSD 512 GB, pantalla Full HD 15.6". Ideal para trabajo y estudio.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$899</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/smartphone/400/220" class="card-img-top" alt="Smartphone Galaxy Z">
+            <div class="card-body">
+              <h5 class="card-title">Smartphone Galaxy Z</h5>
+              <p class="card-text">AMOLED 6.7", cámara 108 MP, batería 5000 mAh, carga rápida 65 W, Android 14.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$549</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/headphones/400/220" class="card-img-top" alt="Auriculares NoisePro">
+            <div class="card-body">
+              <h5 class="card-title">Auriculares NoisePro 500</h5>
+              <p class="card-text">Cancelación activa de ruido, 30 hs de autonomía, Bluetooth 5.3 y sonido Hi-Fi.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$199</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/monitor/400/220" class="card-img-top" alt="Monitor 4K">
+            <div class="card-body">
+              <h5 class="card-title">Monitor 4K CurvedView</h5>
+              <p class="card-text">Panel VA curvo 32", 3840×2160, 144 Hz, 1 ms, HDR400. Ideal para diseño y gaming.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$649</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/keyboard/400/220" class="card-img-top" alt="Teclado Mecánico">
+            <div class="card-body">
+              <h5 class="card-title">Teclado Mecánico RGB</h5>
+              <p class="card-text">Switches Cherry MX Red, RGB por tecla, formato TKL, aluminio, cable USB-C desmontable.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$129</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="card producto-card h-100">
+            <img src="https://picsum.photos/seed/mouse/400/220" class="card-img-top" alt="Mouse ErgoMax">
+            <div class="card-body">
+              <h5 class="card-title">Mouse Inalámbrico ErgoMax</h5>
+              <p class="card-text">Ergonómico, sensor 3200 DPI, receptor 2.4 GHz, batería 18 meses, 7 botones.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <span class="precio">$59</span>
+              <a href="#" class="btn btn-sm btn-primary">
+                <span class="oi oi-cart mr-1"></span>Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-principal text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-left mb-4">
+          <h5 class="footer-titulo">TechStore</h5>
+          <address class="footer-address">
+            <strong>Dirección:</strong><br>
+            Av. Tecnología 1234, Piso 3<br>
+            Buenos Aires, Argentina<br>
+            <abbr title="Teléfono">Tel:</abbr> +54 11 4567-8900<br>
+            <a href="mailto:ventas@techstore.com" class="footer-link">ventas@techstore.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-4">
+          <h5 class="footer-titulo">Horarios</h5>
+          <ul class="list-unstyled footer-texto">
+            <li>Lunes a Viernes: 9:00 – 18:00</li>
+            <li>Sábados: 10:00 – 14:00</li>
+            <li>Domingos: Cerrado</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 text-md-right text-center mb-4">
+          <h5 class="footer-titulo">Redes sociales</h5>
+          <ul class="list-unstyled footer-texto">
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Facebook</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Instagram</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Twitter/X</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <p class="text-center footer-copy mb-0">&copy; 2026 TechStore · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

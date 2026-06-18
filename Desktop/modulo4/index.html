@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TechStore - Inicio</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR FIJA ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand font-weight-bold" href="index.html">⚡ TechStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><span class="oi oi-home mr-1"></span>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html"><span class="oi oi-envelope-closed mr-1"></span>Contacto</a>
+        </li>
+        <li class="nav-item ml-lg-2 mt-2 mt-lg-0">
+          <button class="btn btn-outline-light btn-sm btn-modal-trigger"
+                  data-toggle="modal" data-target="#modalRegistro">
+            <span class="oi oi-person mr-1"></span>Registrarse
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== CAROUSEL ===== -->
+  <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#bannerCarousel" data-slide-to="1"></li>
+      <li data-target="#bannerCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/seed/tech1/1200/450" class="d-block w-100 banner-img" alt="Laptops">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Laptops de última generación</h2>
+          <p>Hasta 30% OFF en modelos seleccionados</p>
+          <a href="#productos" class="btn btn-primary">Ver ofertas</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/seed/tech2/1200/450" class="d-block w-100 banner-img" alt="Smartphones">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Smartphones top 2026</h2>
+          <p>Los mejores precios del mercado</p>
+          <a href="#productos" class="btn btn-primary">Ver productos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/seed/tech3/1200/450" class="d-block w-100 banner-img" alt="Accesorios">
+        <div class="carousel-caption d-none d-md-block banner-caption">
+          <h2>Accesorios para tu setup</h2>
+          <p>Envío gratis en compras mayores a $50</p>
+          <a href="#productos" class="btn btn-primary">Ver accesorios</a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active"><span class="oi oi-home mr-1"></span>Inicio</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- ===== CARACTERÍSTICAS ===== -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-truck feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Envío rápido</h6>
+          <p class="text-muted small">Entrega en 48 hs hábiles.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-shield feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Garantía oficial</h6>
+          <p class="text-muted small">Respaldo del fabricante.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <span class="oi oi-credit-card feature-icon"></span>
+          <h6 class="mt-2 font-weight-bold">Múltiples pagos</h6>
+          <p class="text-muted small">Hasta 12 cuotas sin interés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- ===== PRODUCTOS CON TABS ===== -->
+  <section id="productos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+
+      <ul class="nav nav-tabs nav-fill mb-4" id="tabProductos" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="tab-comp" data-toggle="tab" href="#computacion" role="tab">💻 Computación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="tab-mobile" data-toggle="tab" href="#mobile" role="tab">📱 Mobile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="tab-acc" data-toggle="tab" href="#accesorios" role="tab">🎧 Accesorios</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="tabContent">
+
+        <div class="tab-pane fade show active" id="computacion" role="tabpanel">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/laptop/400/220" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                  <span class="badge-oferta mb-2 d-inline-block">OFERTA</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Intel Core i7 · 16 GB RAM · SSD 512 GB">
+                    Laptop UltraBook Pro
+                  </h5>
+                  <p class="card-text">Pantalla Full HD 15.6". Ideal para trabajo y estudio.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$899</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/monitor/400/220" class="card-img-top" alt="Monitor">
+                <div class="card-body">
+                  <span class="badge-nuevo mb-2 d-inline-block">NUEVO</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Panel VA · 32&quot; · 4K · 144 Hz">
+                    Monitor 4K CurvedView
+                  </h5>
+                  <p class="card-text">Curvo 32", ideal para diseño y gaming.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$649</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/keyboard/400/220" class="card-img-top" alt="Teclado">
+                <div class="card-body">
+                  <span class="badge-destacado mb-2 d-inline-block">DESTACADO</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Cherry MX Red · RGB · TKL · USB-C">
+                    Teclado Mecánico RGB
+                  </h5>
+                  <p class="card-text">Switches mecánicos, construcción en aluminio.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$129</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="mobile" role="tabpanel">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/smartphone/400/220" class="card-img-top" alt="Smartphone">
+                <div class="card-body">
+                  <span class="badge-nuevo mb-2 d-inline-block">NUEVO</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="AMOLED 6.7&quot; · 108 MP · 5000 mAh · Android 14">
+                    Smartphone Galaxy Z
+                  </h5>
+                  <p class="card-text">Carga rápida 65 W, resistencia IP68.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$549</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="accesorios" role="tabpanel">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/headphones/400/220" class="card-img-top" alt="Auriculares">
+                <div class="card-body">
+                  <span class="badge-oferta mb-2 d-inline-block">OFERTA</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="ANC · 30 hs autonomía · Bluetooth 5.3">
+                    Auriculares NoisePro 500
+                  </h5>
+                  <p class="card-text">Cancelación activa de ruido, sonido Hi-Fi.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$199</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+              <div class="card producto-card h-100">
+                <img src="https://picsum.photos/seed/mouse/400/220" class="card-img-top" alt="Mouse">
+                <div class="card-body">
+                  <span class="badge-destacado mb-2 d-inline-block">DESTACADO</span>
+                  <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="3200 DPI · Inalámbrico · Batería 18 meses">
+                    Mouse Inalámbrico ErgoMax
+                  </h5>
+                  <p class="card-text">Diseño ergonómico, 7 botones programables.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center">
+                  <span class="precio">$59</span>
+                  <a href="#" class="btn btn-sm btn-primary"><span class="oi oi-cart mr-1"></span>Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLAPSE Y MULTI COLLAPSE ===== -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="mb-3">Información de compra</h4>
+      <div class="mb-2">
+        <button class="btn btn-outline-primary mr-2 mb-2" data-toggle="collapse" data-target="#colEnvio">
+          <span class="oi oi-truck mr-1"></span>Envíos
+        </button>
+        <button class="btn btn-outline-primary mr-2 mb-2" data-toggle="collapse" data-target="#colDevoluciones">
+          <span class="oi oi-loop-circular mr-1"></span>Devoluciones
+        </button>
+        <button class="btn btn-outline-secondary mb-2" data-toggle="collapse" data-target="#colEnvio, #colDevoluciones">
+          <span class="oi oi-eye mr-1"></span>Ver todo
+        </button>
+      </div>
+      <div class="collapse mb-2" id="colEnvio">
+        <div class="card card-body">
+          <strong>Envíos:</strong> Despachamos en 48 hs hábiles. Envío gratis en compras mayores a $50.
+        </div>
+      </div>
+      <div class="collapse mb-2" id="colDevoluciones">
+        <div class="card card-body">
+          <strong>Devoluciones:</strong> Tenés 30 días para devolver cualquier producto sin costo.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCORDION - OPCIONES DE PAGO ===== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h4 class="mb-3">Opciones de pago</h4>
+      <div id="accordionPagos">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTarjeta" data-parent="#accordionPagos">
+                <span class="oi oi-credit-card mr-2"></span>Tarjeta de crédito
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTarjeta" class="collapse show" data-parent="#accordionPagos">
+            <div class="card-body">Visa, Mastercard y Amex. Hasta <strong>12 cuotas sin interés</strong>.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDebito" data-parent="#accordionPagos">
+                <span class="oi oi-credit-card mr-2"></span>Tarjeta de débito
+              </button>
+            </h5>
+          </div>
+          <div id="collapseDebito" class="collapse" data-parent="#accordionPagos">
+            <div class="card-body"><strong>5% de descuento</strong> pagando con débito. Compatible con Visa y Maestro.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTransferencia" data-parent="#accordionPagos">
+                <span class="oi oi-transfer mr-2"></span>Transferencia bancaria
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTransferencia" class="collapse" data-parent="#accordionPagos">
+            <div class="card-body"><strong>10% de descuento</strong>. Confirmación en 24 hs de recibido el comprobante.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBilletera" data-parent="#accordionPagos">
+                <span class="oi oi-phone mr-2"></span>Billetera virtual
+              </button>
+            </h5>
+          </div>
+          <div id="collapseBilletera" class="collapse" data-parent="#accordionPagos">
+            <div class="card-body">MercadoPago y Ualá. Acreditación inmediata, sin recargos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOTÓN MODAL ===== -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h4>¿Querés recibir ofertas exclusivas?</h4>
+      <p class="text-muted">Registrate y accedé a descuentos solo para miembros.</p>
+      <button class="btn btn-primary btn-lg btn-modal-trigger"
+              data-toggle="modal" data-target="#modalRegistro">
+        <span class="oi oi-person mr-2"></span>Registrarme ahora
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-principal text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 text-left mb-4">
+          <h5 class="footer-titulo">TechStore</h5>
+          <address class="footer-address">
+            Av. Tecnología 1234, Piso 3<br>
+            Buenos Aires, Argentina<br>
+            <abbr title="Teléfono">Tel:</abbr> +54 11 4567-8900<br>
+            <a href="mailto:ventas@techstore.com" class="footer-link">ventas@techstore.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-md-4 text-center mb-4">
+          <h5 class="footer-titulo">Horarios</h5>
+          <ul class="list-unstyled footer-texto">
+            <li>Lunes a Viernes: 9:00 – 18:00</li>
+            <li>Sábados: 10:00 – 14:00</li>
+            <li>Domingos: Cerrado</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 text-md-right text-center mb-4">
+          <h5 class="footer-titulo">Redes sociales</h5>
+          <ul class="list-unstyled footer-texto">
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Facebook</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Instagram</a></li>
+            <li><a href="#" class="footer-link"><span class="oi oi-share-boxed mr-1"></span>Twitter/X</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <p class="text-center footer-copy mb-0">&copy; 2026 TechStore · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL REGISTRO ===== -->
+  <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="modalRegistroLabel">
+            <span class="oi oi-person mr-2"></span>Crear cuenta en TechStore
+          </h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formRegistro">
+            <div class="form-group">
+              <label for="regNombre">Nombre completo</label>
+              <input type="text" class="form-control" id="regNombre" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="regEmail">Email</label>
+              <input type="email" class="form-control" id="regEmail" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="regPassword">Contraseña</label>
+              <input type="password" class="form-control" id="regPassword" placeholder="Mínimo 8 caracteres">
+            </div>
+            <div class="form-group">
+              <label for="regInteres">Categoría de interés</label>
+              <select class="form-control" id="regInteres">
+                <option value="">Seleccioná...</option>
+                <option>Computación</option>
+                <option>Mobile</option>
+                <option>Accesorios</option>
+                <option>Todo</option>
+              </select>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="regTerminos">
+              <label class="form-check-label" for="regTerminos">
+                Acepto los <a href="#">términos y condiciones</a>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="submit" form="formRegistro" class="btn btn-primary">
+            <span class="oi oi-check mr-1"></span>Crear cuenta
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Velocidad del carousel
+    $('#bannerCarousel').carousel({ interval: 3000 });
+
+    // Tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // ===== EVENTOS DEL MODAL (puntos 1, 2, 3) =====
+    var $btnModal = $('.btn-modal-trigger');
+
+    // Punto 1 + 2: modal comienza a abrirse → deshabilitar botón
+    $('#modalRegistro').on('show.bs.modal', function () {
+      console.log('Modal: comenzando a abrirse (show.bs.modal)');
+      $btnModal
+        .prop('disabled', true)
+        .removeClass('btn-primary btn-outline-light')
+        .addClass('btn-secondary');
+    });
+
+    // Punto 1: modal terminó de abrirse
+    $('#modalRegistro').on('shown.bs.modal', function () {
+      console.log('Modal: terminó de abrirse (shown.bs.modal)');
+    });
+
+    // Punto 1: modal comienza a ocultarse
+    $('#modalRegistro').on('hide.bs.modal', function () {
+      console.log('Modal: comenzando a ocultarse (hide.bs.modal)');
+    });
+
+    // Punto 1 + 3: modal terminó de ocultarse → rehabilitar botón
+    $('#modalRegistro').on('hidden.bs.modal', function () {
+      console.log('Modal: terminó de ocultarse (hidden.bs.modal)');
+      $btnModal
+        .prop('disabled', false)
+        .removeClass('btn-secondary')
+        .addClass('btn-primary');
+    });
+  </script>
+
+</body>
+</html>

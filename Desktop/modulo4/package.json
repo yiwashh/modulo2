@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-web-modulo4",
+  "version": "1.0.0",
+  "description": "TechStore - Proyecto Web con Bootstrap, SCSS y NPM Scripts",
+  "scripts": {
+    "dev": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "scss:watch": "node-sass -w -o css/ css/",
+    "clean": "rimraf distri",
+    "copy": "copyfiles -u 0 index.html contacto.html css/styles.css distri",
+    "build": "npm run clean && npm run scss && npm run copy"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "lite-server": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "rimraf": "^4.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "jquery": "^3.6.4",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1"
+  }
+}

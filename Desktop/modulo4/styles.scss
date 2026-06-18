@@ -1,0 +1,195 @@
+// ============================================================
+// styles.scss — TechStore — Módulo 4
+// Este archivo va dentro de la carpeta css/
+// Compilar con: npm run scss
+// ============================================================
+
+// ---- Variables (punto 5) ----
+$color-amarillo: #f1c40f;
+$color-rojo:     #e74c3c;
+$color-verde:    #2ecc71;
+$color-primario: #0d6efd;
+$color-acento:   #0a58ca;
+$color-oscuro:   #1a1a2e;
+
+// ---- Mixin (punto 6) ----
+// Incluye márgenes, padding y colores como parámetros
+@mixin estilos-componente(
+  $bg: #ffffff,
+  $color-texto: #212529,
+  $margen: 0,
+  $relleno: 1.5rem,
+  $borde-radio: 10px
+) {
+  background-color: $bg;
+  color: $color-texto;
+  margin: $margen;
+  padding: $relleno;
+  border-radius: $borde-radio;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+// ---- Body ----
+body {
+  padding-top: 56px;
+}
+
+// ---- Banner ----
+.banner-img {
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.banner-caption {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+// ---- Feature icons ----
+.feature-icon {
+  font-size: 2rem;
+  color: $color-primario;
+}
+
+// ---- Cards de producto (usando el mixin) ----
+.producto-card {
+  @include estilos-componente($margen: 0, $relleno: 0);
+  border: none;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+
+  .card-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+  }
+}
+
+// ---- Precio ----
+.precio {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $color-primario;
+}
+
+// ---- Badges usando variables de color ----
+.badge-oferta {
+  background-color: $color-rojo;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.badge-nuevo {
+  background-color: $color-verde;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.badge-destacado {
+  background-color: $color-amarillo;
+  color: #212529;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+// ---- Tabla con scroll ----
+.tabla-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+
+  table {
+    margin-bottom: 0;
+    min-width: 700px;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+// ---- Footer ----
+.footer-principal {
+  background-color: $color-oscuro;
+}
+
+.footer-titulo {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-texto {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  line-height: 1.8;
+}
+
+.footer-address {
+  font-size: 0.875rem;
+  color: #adb5bd;
+  line-height: 1.8;
+  font-style: normal;
+}
+
+.footer-link {
+  color: #74b9ff;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
+.footer-hr {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
